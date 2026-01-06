@@ -49,9 +49,21 @@ Este proyecto simula el sistema de backend de una clínica, permitiendo la admin
 
 ---
 
-## Endpoints de Prueba (Ejemplos)
+## 📡 Endpoints de Prueba
 
-Puedes importar la colección de Postman adjunta o probar manualmente:
+Para probar la API localmente, puedes importar la colección completa en Postman:
+
+📥 **[Descargar Colección de Postman](./VitalClinic_Postman_Collection.json)**
+
+### Pasos para importar:
+1. Abre Postman.
+2. Haz clic en el botón **Import**.
+3. Arrastra el archivo `.json` descargado.
+4. Tendrás todas las peticiones configuradas.
+
+---
+
+### Ejemplos rápidos (JSON)
 
 **POST** `/pacientes`
 ```json
@@ -61,3 +73,18 @@ Puedes importar la colección de Postman adjunta o probar manualmente:
     "dni": "12345678",
     "fechaIngreso": "2026-01-01"
 }
+
+**POST** `/odontologos`
+{
+    "nombre": "Jose",
+    "apellido": "Nuñez",
+    "matricula": "MN-92188"
+}
+
+**POST** `/turnos`
+{
+    "paciente": { "id": 1 },
+    "odontologo": { "id": 1 },
+    "fechaHora": "2026-10-20T15:30:00"
+}
+

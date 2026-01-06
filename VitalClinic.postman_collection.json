@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "915e6eb4-d319-4114-9650-eeb1d0243585",
+		"name": "VitalClinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37929800"
+	},
+	"item": [
+		{
+			"name": "Agregar Paciente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Thiago\",\r\n    \"apellido\": \"Poletti\",\r\n    \"dni\": \"12345678\",\r\n    \"fechaIngreso\": \"2026-01-06\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Odontologo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose\",\r\n    \"apellido\": \"Nuñez\",\r\n    \"matricula\": \"MN-92188\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Turnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paciente\": {\r\n        \"id\": 1\r\n    },\r\n    \"odontologo\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaHora\": \"2026-01-20T10:30:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/turnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"turnos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
