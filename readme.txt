@@ -1,4 +1,4 @@
-# 🏥 VitalClinic API
+# VitalClinic API
 
 API RESTful desarrollada con **Java** y **Spring Boot** para la gestión de turnos médicos. 
 Este proyecto simula el sistema de backend de una clínica, permitiendo la administración de pacientes, odontólogos y la asignación de citas.
@@ -7,7 +7,7 @@ Este proyecto simula el sistema de backend de una clínica, permitiendo la admin
 
 ---
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * **Lenguaje:** Java 17 (LTS)
 * **Framework:** Spring Boot 3
@@ -18,7 +18,7 @@ Este proyecto simula el sistema de backend de una clínica, permitiendo la admin
 
 ---
 
-## ⚙️ Funcionalidades Principales
+## Funcionalidades Principales
 
 ### 1. Gestión de Pacientes y Odontólogos
 * CRUD completo (Crear, Leer, Buscar por ID).
