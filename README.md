@@ -65,8 +65,7 @@ Para probar la API localmente, puedes importar la colección completa en Postman
 
 ### Ejemplos rápidos (JSON)
 
-**POST** `/pacientes`
-```json
+**POST** `/odontologos`
 {
     "nombre": "Thiago",
     "apellido": "Poletti",
