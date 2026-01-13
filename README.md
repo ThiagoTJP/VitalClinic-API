@@ -1,4 +1,4 @@
-# 🏥 VitalClinic API
+# VitalClinic API
 
 API RESTful desarrollada con **Java** y **Spring Boot** para la gestión de turnos médicos. 
 Este proyecto simula el sistema de backend de una clínica, permitiendo la administración de pacientes, odontólogos y la gestión de agendas médicas.
@@ -7,7 +7,7 @@ Este proyecto simula el sistema de backend de una clínica, permitiendo la admin
 
 ---
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * **Lenguaje:** Java 17 (LTS)
 * **Framework:** Spring Boot 3
@@ -20,7 +20,7 @@ Este proyecto simula el sistema de backend de una clínica, permitiendo la admin
 
 ---
 
-## ⚙️ Funcionalidades Principales
+## Funcionalidades Principales
 
 ### 1. Gestión de Pacientes y Odontólogos
 * CRUD completo (Crear, Leer, Buscar por ID).
@@ -44,7 +44,7 @@ Este proyecto simula el sistema de backend de una clínica, permitiendo la admin
 
 ---
 
-## 📖 Documentación Interactiva (Swagger)
+## Documentación Interactiva (Swagger)
 
 El proyecto incluye Swagger UI para probar los endpoints directamente desde el navegador sin instalar herramientas extra.
 
@@ -53,7 +53,7 @@ El proyecto incluye Swagger UI para probar los endpoints directamente desde el n
 
 ---
 
-## 🛠️ Instalación y Ejecución
+## Instalación y Ejecución
 
 1.  Clonar el repositorio:
     ```bash
@@ -66,21 +66,22 @@ El proyecto incluye Swagger UI para probar los endpoints directamente desde el n
 
 ---
 
-## 🧪 Ejecución de Tests
+## Ejecución de Tests
 
 Para ejecutar las pruebas unitarias y verificar la integridad del sistema:
 
 **Desde la terminal:**
 ```bash
 mvn test
+```
 
-## 📡 Endpoints de Prueba
+ ## Endpoints de Prueba
 
 Para probar la API localmente, puedes usar Swagger o importar la colección completa en Postman:
 
 📥 **[Descargar Colección de Postman](./VitalClinic_postman_collection.json)**
 
-### ⚡ Ejemplos rápidos (JSON para Copiar y Pegar)
+### Ejemplos rápidos (JSON para Copiar y Pegar)
 
 **1. Crear un Odontólogo**
 
