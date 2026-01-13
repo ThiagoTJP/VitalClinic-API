@@ -89,6 +89,48 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Buscar Turnos por Paciente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/turnos/paciente/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"turnos",
+						"paciente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Turnos por Odontólogo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/turnos/odontologo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"turnos",
+						"odontologo",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
