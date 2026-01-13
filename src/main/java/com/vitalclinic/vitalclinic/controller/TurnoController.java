@@ -7,10 +7,10 @@ import org.springframework.http.ResponseEntity; // Importante: Clase para maneja
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-/**
- * Controlador REST para la gestión de Turnos.
-   coordina la relación entre Pacientes y Odontólogos.
- */
+
+  // Controlador REST para la gestión de Turnos.
+  // coordina la relación entre Pacientes y Odontólogos.
+ 
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
@@ -41,5 +41,22 @@ public class TurnoController {
     public ResponseEntity<List<Turno>> listarTurnos() {
         // Delegamos la llamada al servicio y envolvemos el resultado en una respuesta HTTP estandar.
         return ResponseEntity.ok(turnoService.listarTurnos());
+    }
+
+
+     // Endpoint para ver el historial de turnos de un paciente.
+     // URL en Swagger: GET /turnos/paciente/{id}
+
+    @GetMapping("/paciente/{id}")
+    public ResponseEntity<List<Turno>> listarPorPaciente(@PathVariable Long id) {
+        return ResponseEntity.ok(turnoService.listarTurnosPorPaciente(id));
+    }
+
+    // Endpoint para ver la agenda de turnos de un odontólogo.  
+    // URL en Swagger: GET /turnos/odontologo/{id}
+
+    @GetMapping("/odontologo/{id}")
+    public ResponseEntity<List<Turno>> listarPorOdontologo(@PathVariable Long id) {
+        return ResponseEntity.ok(turnoService.listarTurnosPorOdontologo(id));
     }
 }

@@ -14,7 +14,7 @@ import java.util.Optional;
   Se encarga de recibir las peticiones externas (desde Postman o Frontend)
   y coordinar con el Service la ejecución de la lógica.
  */
-@RestController // Convierte esta clase en un controlador web que responde con datos JSON (no HTML).
+@RestController // Convierte esta clase en un controlador web que responde con datos JSON.
 @RequestMapping("/pacientes") // Define la URL base. Todo lo que llegue a http://localhost:8080/pacientes entra aquí.
 public class PacienteController {
 

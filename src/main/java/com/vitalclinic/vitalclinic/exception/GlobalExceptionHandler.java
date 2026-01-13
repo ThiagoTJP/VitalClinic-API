@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
-@ControllerAdvice // Esto le dice a Spring: "Escucha todos los errores de todos los Controllers"
+// @ControllerAdvice // Esto le dice a Spring: "Escucha todos los errores de todos los Controllers"
 public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);

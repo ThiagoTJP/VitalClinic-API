@@ -72,7 +72,7 @@ public class TurnoService {
         
         Turno turnoGuardado = turnoRepository.save(turno);
         
-        logger.info("Turno agendado con ID: " + turnoGuardado.getId() + " para: " + turnoGuardado.getFechaHora());
+        logger.info("Turno agendado con ID: " + turnoGuardado.getId() + " para la fecha: " + turnoGuardado.getFechaHora());
         return turnoGuardado;
     }
 
@@ -90,5 +90,62 @@ public class TurnoService {
     // Eliminar turno por id
     public void eliminarTurno(Long id) {
         turnoRepository.deleteById(id);
+    }
+
+   
+    //Busca la agenda completa de un odontologo.
+    public List<Turno> listarTurnosPorOdontologo(Long id) {
+        String nombreOdontologo = odontologoRepository.findById(id)
+                .map(o -> o.getNombre() + " " + o.getApellido())
+                .orElse("Desconocido (ID no encontrado)");
+
+        logger.info("\n");
+        logger.info("=== BÚSQUEDA DE AGENDA MÉDICA ===");
+        logger.info("Odontólogo: " + nombreOdontologo);
+        logger.info("ID Solicitado: " + id);
+        
+        List<Turno> turnosEncontrados = turnoRepository.findByOdontologoId(id);
+        
+        //Imprimir detalle de cada turno en la consola ---
+        if (turnosEncontrados.isEmpty()) {
+            logger.info("   (No hay turnos asignados)");
+        } else {
+            for (Turno t : turnosEncontrados) {
+                logger.info("   ➜ Turno #" + t.getId() + " | Fecha: " + t.getFechaHora() + " | Paciente: " + t.getPaciente().getNombre() + " " + t.getPaciente().getApellido());
+            }
+        }
+
+        logger.info("📋  Total: " + turnosEncontrados.size() + " turnos encontrados.");
+        logger.info("======================================\n");
+        
+        return turnosEncontrados; // Devuelve todos los datos al Swagger
+    }
+
+    //Busca todos los turnos asociados a un paciente.
+    public List<Turno> listarTurnosPorPaciente(Long id) {
+        String nombrePaciente = pacienteRepository.findById(id)
+                .map(p -> p.getNombre() + " " + p.getApellido())
+                .orElse("Desconocido (ID no encontrado)");
+
+        logger.info("\n");
+        logger.info("=== BÚSQUEDA DE HISTORIAL CLÍNICO ===");
+        logger.info("Paciente: " + nombrePaciente);
+        logger.info("ID Solicitado: " + id);
+        
+        List<Turno> turnosEncontrados = turnoRepository.findByPacienteId(id);
+
+        // Imprimir detalle
+        if (turnosEncontrados.isEmpty()) {
+            logger.info("   (El paciente no tiene historial)");
+        } else {
+            for (Turno t : turnosEncontrados) {
+                logger.info("   ➜ Turno #" + t.getId() + " | Fecha: " + t.getFechaHora() + " | Dr/a: " + t.getOdontologo().getApellido());
+            }
+        }
+        
+        logger.info("📋  Total: " + turnosEncontrados.size() + " turnos encontrados.");
+        logger.info("======================================\n");
+        
+        return turnosEncontrados; // Devuelve todos los datos al Swagger
     }
 }
