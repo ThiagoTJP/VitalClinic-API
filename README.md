@@ -92,9 +92,11 @@ Para probar la API localmente, puedes usar Swagger o importar la colección comp
     "apellido": "Gomez",
     "matricula": "MN-556677"
 }
-2. Crear un Paciente POST /pacientes
+```
 
-JSON
+**2. Crear un Paciente POST /pacientes**
+
+```json
 
 {
     "nombre": "Thiago",
@@ -102,12 +104,14 @@ JSON
     "dni": "12345678",
     "fechaIngreso": "2027-01-01"
 }
-3. Agendar un Turno POST /turnos
+```
+**3. Agendar un Turno POST /turnos**
 
-JSON
+```json
 
 {
     "paciente": { "id": 1 },
     "odontologo": { "id": 1 },
     "fechaHora": "2027-10-20T15:30:00"
 }
+```
