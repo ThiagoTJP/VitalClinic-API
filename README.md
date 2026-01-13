@@ -79,7 +79,7 @@ mvn test
 
 Para probar la API localmente, puedes usar Swagger o importar la colección completa en Postman:
 
-📥 **[Descargar Colección de Postman](./VitalClinic_postman_collection.json)**
+📥 **[Descargar Colección de Postman](https://github.com/ThiagoTJP/VitalClinic-API/blob/main/VitalClinic.postman_collection.json)**
 
 ### Ejemplos rápidos (JSON para Copiar y Pegar)
 
@@ -115,3 +115,11 @@ Para probar la API localmente, puedes usar Swagger o importar la colección comp
     "fechaHora": "2027-10-20T15:30:00"
 }
 ```
+
+**4. Consultar Historiales (GET)**
+
+Por Paciente: http://localhost:8080/turnos/paciente/1
+
+Por Odontólogo: http://localhost:8080/turnos/odontologo/1
+
+Listar Todos: http://localhost:8080/turnos
